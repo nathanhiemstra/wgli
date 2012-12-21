@@ -1,0 +1,144 @@
+<IfModule mod_access.c>
+SetEnv MOD_mod_access 1
+</IfModule>
+<IfModule mod_actions.c>
+SetEnv MOD_mod_actions 1
+</IfModule>
+<IfModule mod_alias.c>
+SetEnv MOD_mod_alias 1
+</IfModule>
+<IfModule mod_asis.c>
+SetEnv MOD_mod_asis 1
+</IfModule>
+<IfModule mod_auth.c>
+SetEnv MOD_mod_auth 1
+</IfModule>
+<IfModule mod_auth_anon.c>
+SetEnv MOD_mod_auth_anon 1
+</IfModule>
+<IfModule mod_auth_dbm.c>
+SetEnv MOD_mod_auth_dbm 1
+</IfModule>
+<IfModule mod_auth_digest.c>
+SetEnv MOD_mod_auth_digest 1
+</IfModule>
+<IfModule mod_auth_mysql.c>
+SetEnv MOD_mod_auth_mysql 1
+</IfModule>
+<IfModule mod_auth_svn.c>
+SetEnv MOD_mod_auth_svn 1
+</IfModule>
+<IfModule mod_autoindex.c>
+SetEnv MOD_mod_autoindex 1
+</IfModule>
+<IfModule mod_cache.c>
+SetEnv MOD_mod_cache 1
+</IfModule>
+<IfModule mod_cband.c>
+SetEnv MOD_mod_cband 1
+</IfModule>
+<IfModule mod_cern_meta.c>
+SetEnv MOD_mod_cern_meta 1
+</IfModule>
+<IfModule mod_cgi.c>
+SetEnv MOD_mod_cgi 1
+</IfModule>
+<IfModule mod_dav.c>
+SetEnv MOD_mod_dav 1
+</IfModule>
+<IfModule mod_dav_fs.c>
+SetEnv MOD_mod_dav_fs 1
+</IfModule>
+<IfModule mod_dav_svn.c>
+SetEnv MOD_mod_dav_svn 1
+</IfModule>
+<IfModule mod_deflate.c>
+SetEnv MOD_mod_deflate 1
+</IfModule>
+<IfModule mod_dir.c>
+SetEnv MOD_mod_dir 1
+</IfModule>
+<IfModule mod_encoding.c>
+SetEnv MOD_mod_encoding 1
+</IfModule>
+<IfModule mod_env.c>
+SetEnv MOD_mod_env 1
+</IfModule>
+<IfModule mod_expires.c>
+SetEnv MOD_mod_expires 1
+</IfModule>
+<IfModule mod_ext_filter.c>
+SetEnv MOD_mod_ext_filter 1
+</IfModule>
+<IfModule mod_fastcgi.c>
+SetEnv MOD_mod_fastcgi 1
+</IfModule>
+<IfModule mod_fcgid.c>
+SetEnv MOD_mod_fcgid 1
+</IfModule>
+<IfModule mod_headers.c>
+SetEnv MOD_mod_headers 1
+</IfModule>
+<IfModule mod_imap.c>
+SetEnv MOD_mod_imap 1
+</IfModule>
+<IfModule mod_include.c>
+SetEnv MOD_mod_include 1
+</IfModule>
+<IfModule mod_info.c>
+SetEnv MOD_mod_info 1
+</IfModule>
+<IfModule mod_limitipconn.c>
+SetEnv MOD_mod_limitipconn 1
+</IfModule>
+<IfModule mod_log_config.c>
+SetEnv MOD_mod_log_config 1
+</IfModule>
+<IfModule mod_log_forensic.c>
+SetEnv MOD_mod_log_forensic 1
+</IfModule>
+<IfModule mod_logio.c>
+SetEnv MOD_mod_logio 1
+</IfModule>
+<IfModule mod_mime.c>
+SetEnv MOD_mod_mime 1
+</IfModule>
+<IfModule mod_mime_magic.c>
+SetEnv MOD_mod_mime_magic 1
+</IfModule>
+<IfModule mod_negotiation.c>
+SetEnv MOD_mod_negotiation 1
+</IfModule>
+<IfModule mod_rewrite.c>
+SetEnv MOD_mod_rewrite 1
+</IfModule>
+<IfModule mod_security.c>
+SetEnv MOD_mod_security 1
+</IfModule>
+<IfModule mod_setenvif.c>
+SetEnv MOD_mod_setenvif 1
+</IfModule>
+<IfModule mod_speling.c>
+SetEnv MOD_mod_speling 1
+</IfModule>
+<IfModule mod_ssl.c>
+SetEnv MOD_mod_ssl 1
+</IfModule>
+<IfModule mod_status.c>
+SetEnv MOD_mod_status 1
+</IfModule>
+<IfModule mod_suexec.c>
+SetEnv MOD_mod_suexec 1
+</IfModule>
+<IfModule mod_unique_id.c>
+SetEnv MOD_mod_unique_id 1
+</IfModule>
+<IfModule mod_userdir.c>
+SetEnv MOD_mod_userdir 1
+</IfModule>
+<IfModule mod_usertrack.c>
+SetEnv MOD_mod_usertrack 1
+</IfModule>
+<IfModule mod_vhost_alias.c>
+SetEnv MOD_mod_vhost_alias 1
+</IfModule>
