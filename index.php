@@ -375,12 +375,6 @@ function getState($i) {
 
 
 			<li>
-				<p><strong>Outreach</strong><br />
-				Two of our representatives gave a presentation on what ACA is to 150 Cook County Social Service Case Workers.  It was very well received. 
-				</p>
-			</li>
-
-			<li>
 
 				<p>
 					<strong>Next Intergroup meeting:</strong><br />
@@ -416,20 +410,8 @@ function getState($i) {
 				</p>
 			</li>
 
-			<li>
-				<p>First ACA Teen meeting exists. Las Vegas, NV.</p>
-			</li>
-
-			<li>
-				<p><strong><a href="/events/details/?id=38" target="_blank">2014 Annual Business Conference</a></strong>
-					<br>- Held at: <a href="http://www.tiu.edu/" target="_blank">Trinity University</a>, Deerfield, IL <br>&nbsp;&nbsp;(near Chicago)
-					<br>- <a href="mailto:chair@westgreatlakesaca.org">Interested in helping organize</a>?
-				</p>
-					
-			</li>
-
 			<li  class="link-red-book">
-				<p>- <strong>Red Book is now an eBook! Over 3700 sold!</strong>:
+				<p>- <strong>Red Book is now an eBook</strong>:
 					 <a href="http://www.amazon.com/CHILDREN-ALCOHOLICS-DYSFUNCTIONAL-FAMILIES-ebook/dp/B008YH705E/ref=sr_1_3?s=digital-text&ie=UTF8&qid=1346814607&sr=1-3&keywords=adult+children+of+alcoholics" target="_blank">Amazon</a> and <a href="http://www.barnesandnoble.com/w/adult-children-of-alcoholics-dysfunctional-families-aca-wso-inc/1112610318" target="_blank">Barnes and Noble</a><br>
 					- <strong>Audiobook</strong> coming soon.<br>
 					- <strong>Spanish</strong> version coming soon.
