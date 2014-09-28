@@ -99,7 +99,8 @@ ul.list-normal.list-secondary li,
 	line-height: 1.3em;
 }
 
-#content .list-normal li.list-single-space
+#content .list-normal li.list-single-space,
+#content .list-normal.list-single-space li,
 #content .list-single-space {
 	margin-bottom: 5px;
 }

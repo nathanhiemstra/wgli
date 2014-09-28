@@ -91,12 +91,18 @@ $meetings_indiana = mysql_query($query_meetings_indiana, $wgli_admin) or die(mys
 $row_meetings_indiana = mysql_fetch_assoc($meetings_indiana);
 $totalRows_meetings = mysql_num_rows($meetings_indiana);
 
-
+$unixdate_now_year = date('Y');
+$unixdate_now_month = date('m');
+$unixdate_now_month_3_ago = ($unixdate_now_month - 3);
 $unixdate_now_pre = date('Y-m-');
 $unixdate_now_day = (date('d') - 1);
 $unixdate_now_post = date(' G:i:s');
 $unixdate_now = $unixdate_now_pre.$unixdate_now_day.$unixdate_now_post;
 $colname_event = $unixdate_now;
+
+
+$unixdate_3_months_ago = $unixdate_now_year.'-'.$unixdate_now_month_3_ago.'-'.$unixdate_now_day.$unixdate_now_post;
+
 
 
 mysql_select_db($database_wgli_admin, $wgli_admin);
@@ -118,6 +124,15 @@ $query_next_ig_meeting = "SELECT *, UNIX_TIMESTAMP(when_start) AS unixdate_when_
 $next_ig_meeting = mysql_query($query_next_ig_meeting, $wgli_admin) or die(mysql_error());
 $row_next_ig_meeting = mysql_fetch_assoc($next_ig_meeting);
 $totalRows_next_ig_meeting = mysql_num_rows($next_ig_meeting);
+
+
+mysql_select_db($database_wgli_admin, $wgli_admin);
+/*  $query_ig_meetings = sprintf("SELECT *, UNIX_TIMESTAMP(when_start) AS unixdate_when_start, UNIX_TIMESTAMP(when_end) AS unixdate_when_end 														   FROM intergroup_meetings WHERE when_start > %s AND active = 'y' ORDER BY when_start ASC", GetSQLValueString($colname_ig_meetings, "date"));*/
+$query_news_meetings = sprintf("SELECT *, UNIX_TIMESTAMP(time_start) AS unixdate_time_start, UNIX_TIMESTAMP(date_added) AS unixdate_date_added, id, neighborhood, zone, `day`, time_start, active, date_added FROM meetings WHERE date_added > %s ORDER BY date_added ASC", GetSQLValueString($unixdate_3_months_ago, "date"));
+$news_meetings = mysql_query($query_news_meetings, $wgli_admin) or die(mysql_error());
+$row_news_meetings = mysql_fetch_assoc($news_meetings);
+$totalRows_news_meetings = mysql_num_rows($news_meetings);
+
 
 
  ?>
@@ -155,11 +170,16 @@ function getDayNames($i) {
 		print "Saturday";
 	}
 }
+function getState($i) {
+	if ($i == 1) {
+		print "WI";
+	} else if 	($i == 2) {
+		print "IL";
+	} else if	($i == 3) {
+		print "IN";
+	} 
+}
 ?>
-
-
-
-
 
 
 
@@ -277,7 +297,7 @@ function getDayNames($i) {
 				 <li>
 
 				 	<? if ($row_event['title']) { ?>
-	                 	<a href="/events/details/?id=<?php echo $row_event['id']; ?>"><strong><?php echo $row_event['title']; ?></strong></a><br>
+	                 	<a href="/events/details/?id=<?php echo $row_event['id']; ?>"><strong><?php echo $row_event['title']; ?></strong></a><br/>
 					<? } ?>
 
 
@@ -322,18 +342,35 @@ function getDayNames($i) {
 
 
 
-        <?php if ($totalRows_event == 0) { $class_first = 'class="first"';} ?>
+<?php if ($totalRows_event == 0) { $class_first = 'class="first"';} ?>
 		<h4 <?=$class_first?>>Local ACA &amp; Intergroup News</h4>
 		<ul class="list-no-indent">
-			<? /**/ ?>
-			<li>
-				<p><strong>New Meetings Listed:</strong></p>
-				<ul class="list-normal list-secondary  list-normal-size list-single-space ">
-				  <li><a href="#meeting-id-38" class="meeting-cta">Fitchburg, WI &ndash; Tuesday, 7:00pm</a></li>
-				  <li><a href="#meeting-id-36" class="meeting-cta">Fitchburg, WI &ndash; Saturday 2:00pm</a></li>
-				  <li><a href="#meeting-id-37" class="meeting-cta">Barrington, IL &ndash; Monday 7:00pm</a></li>
-				</ul>
-			</li>
+
+
+
+
+<?php if ($totalRows_news_meetings > 0) { // Show if recordset empty ?>
+		<li>
+			<p><strong>New Meetings Listed:</strong></p>
+			<ul class="list-normal list-secondary  list-normal-size list-single-space ">
+	<?php do { ?>
+				<li>
+					<a href="#meeting-id-<?=$row_news_meetings['id']?>" class="meeting-cta">
+						<?=$row_news_meetings['neighborhood']?>,
+						<?getState($row_news_meetings['zone'])?> &ndash;
+						<?getDayNames($row_news_meetings['day'])?>, 
+						<?=date('g:ia' , $row_news_meetings['unixdate_time_start'])?>
+					</a>
+				</li>
+  <?php } while ($row_news_meetings = mysql_fetch_assoc($news_meetings)); ?>
+  			</ul>
+		</li>
+<? } ?>
+
+
+
+
+	
 			
 
 
@@ -380,7 +417,7 @@ function getDayNames($i) {
 			</li>
 
 			<li>
-				<p>First ACA Teen meeting exists. Las Vegas, NV.</a>
+				<p>First ACA Teen meeting exists. Las Vegas, NV.</p>
 			</li>
 
 			<li>
@@ -388,16 +425,8 @@ function getDayNames($i) {
 					<br>- Held at: <a href="http://www.tiu.edu/" target="_blank">Trinity University</a>, Deerfield, IL <br>&nbsp;&nbsp;(near Chicago)
 					<br>- <a href="mailto:chair@westgreatlakesaca.org">Interested in helping organize</a>?
 				</p>
-
 					
 			</li>
-
-
-
-
-
-
-
 
 			<li  class="link-red-book">
 				<p>- <strong>Red Book is now an eBook! Over 3700 sold!</strong>:
@@ -407,15 +436,7 @@ function getDayNames($i) {
 				</p>
 			</li>
 
-		
 
-
-
-
-
-
-
-			</li>
 		</ul>
 	</div>
 
