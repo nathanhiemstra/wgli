@@ -15,6 +15,8 @@
 <p><strong>What is the Intergroup?</strong></p>
 <p>The West Great Lakes <acronym title="Adult Children of Alcoholics">ACA</acronym> Intergroup  <acronym title="Not for Profit">NFP</acronym> is an organization of representatives from <acronym title="Adult Children of Alcoholics">ACA</acronym> meetings in the Chicago, SW Wisconsin and Milwaukee, and NW Indiana areas. The Intergroup's purpose is to help people find meetings, circulate news between meetings, plan events that help unify the meetings, and provide resources to the meetings.</p>
 
+<p><a href="/about/intergroup-meeting-schedule/">Intergroup meeting schedule</a></p>
+
 
 <p><strong>What is Adult Children of Alcoholics (<acronym title="Adult Children of Alcoholics">ACA</acronym> or <acronym title="Adult Children of Alcoholics">ACoA</acronym>)?</strong></p>
 

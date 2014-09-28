@@ -31,7 +31,8 @@
 	<li><a href="#who-runs-aca">Who runs <acronym title="Adult Children of Alcoholics">ACA</acronym>?</a></li> 
 	<li><a href="#therapy">Is <acronym title="Adult Children of Alcoholics">ACA</acronym> therapy?</a></li> 
 	<li><a href="#identify-myself-or-talk">Do I have to identify myself or say anything in an <acronym title="Adult Children of Alcoholics">ACA</acronym> meeting?</a></li>
-	<li><a href="#what-talk-about">What do people talk about in <acronym title="Adult Children of Alcoholics">ACA</acronym> meetings?</a></li>   
+	<li><a href="#what-talk-about">What do people talk about in <acronym title="Adult Children of Alcoholics">ACA</acronym> meetings?</a></li>
+	<li><a href="#donate-to-intergourp">How can I donate to the Intergroup?</a></li>
 
 </ul>
 
@@ -118,9 +119,14 @@
 	<dt id="what-talk-about">What do people talk about in <acronym title="Adult Children of Alcoholics">ACA</acronym> meetings?</dt>  
 	<dd>We talk about what it was like growing up in a dysfunctional home, how it has affected us as adults, and how we’re learning to live more fulfilling lives. For many, these meetings are the first time we have talked about these topics in a setting where others understand and don’t judge us. We can finally break the rules of our dysfunctional homes of: “don’t talk, don’t trust, don’t feel”. More about what meetings are like.</dd>
 
+	<dt id="donate-to-intergourp">How can I donate to the Intergroup?</dt>  
+	<dd>To contribute to the Intergroup, send a check to: <br>
+	West Great Lakes ACA Intergroup<br>
+	P.O. Box 2124, Bolingbrook, IL 60440<br><br>
 
+	Or have your meeting’s Intergroup representative bring your donation to the next in-person intergroup meeting.</dd>
 
-
+	
 </dl>
 
 <p><a href="mailto:webmaster@westgreatlakesaca.org" class="link-add"><strong>Submit a question</strong></a></p>

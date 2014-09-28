@@ -1,7 +1,7 @@
 <?php require_once('../../Connections/wgli_admin.php');  ?>
 <?php
 if (!function_exists("GetSQLValueString")) {
-function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
+function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "")
 {
   if (PHP_VERSION < 6) {
     $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
@@ -12,7 +12,7 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
   switch ($theType) {
     case "text":
       $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
-      break;    
+      break;
     case "long":
     case "int":
       $theValue = ($theValue != "") ? intval($theValue) : "NULL";
@@ -42,7 +42,7 @@ $row_event = mysql_fetch_assoc($event);
 $totalRows_event = mysql_num_rows($event);
 ?>
 <?
-	$title = $row_event['title']." - ".$row_event['where_city_state']; 
+	$title = $row_event['title']." - ".$row_event['where_city_state'];
 	$section = "events";
 	$page = "";
 	$description = "";
@@ -56,12 +56,12 @@ $totalRows_event = mysql_num_rows($event);
 <div id="main">
 		<h1 class="no-margin-bottom">
 			<span class="visuallyhidden">Event: </span>
-			<?php echo $row_event['title']; ?>			
+			<?php echo $row_event['title']; ?>
 		</h1>
-		<p class="sponsor"><?php echo $row_event['sponsor']; ?></p> 
+		<p class="sponsor"><?php echo $row_event['sponsor']; ?></p>
 		<div class="event-item">
 		<div class="event-item-content">
-			
+
 			<dl class="event-item-details-list">
 				<? if ($row_event['what_description']) {?>
 					<dt class="event-item-details-list-term first">
@@ -80,21 +80,34 @@ $totalRows_event = mysql_num_rows($event);
 					</dt>
 					<dd class="event-item-details-list-definition">
 						<strong>
-							<? 
+							<?
 								$when_start_day = date('Ymd' , $row_event['unixdate_when_start']);
 								$when_end_day = date('Ymd' , $row_event['unixdate_when_end']);
-							?>
-							<? echo date('l, M j Y, g:ia' , $row_event['unixdate_when_start']); ?>
-							<?
+
+								// If it's midnight, it's 00:00:00 in the DB, which means it's not set.
+								if (date('gi' , $row_event['unixdate_when_start']) !== "1200") {
+									$when_start_time = date(', g:ia' , $row_event['unixdate_when_start']);
+								}
+
+								echo date('l, M j, Y' , $row_event['unixdate_when_start']);
+								echo $when_start_time;
+
 								if ($row_event['unixdate_when_end'] !== NULL) {
 									if ($when_start_day == $when_end_day) {
 										echo date(' - g:ia' , $row_event['unixdate_when_end']);
 									} else {
-										echo date(' - l, M j, g:ia' , $row_event['unixdate_when_end']);
+										echo date(' - l, M j' , $row_event['unixdate_when_end']);
+										if ($when_start_time) {
+											echo date(', g:ia' , $row_event['unixdate_when_end']);
+										}
 									}
-								} 
+								}
 							?>
-						</strong>	
+
+						</strong>
+						<?  if ($row_event['when_details']) { ?>
+							<br><?=$row_event['when_details']?>
+						<? } ?>
 					</dd>
 				<? } ?>
 
@@ -110,9 +123,9 @@ $totalRows_event = mysql_num_rows($event);
 							<?php echo $row_event['where_city_state']; ?>
 						</a>
 					</p>
-					<?php echo $row_event['where_description']; ?>					
+					<?php echo $row_event['where_description']; ?>
 				</dd>
-		
+
 				<? if ($row_event['who']) {?>
 					<dt class="event-item-details-list-term">
 						Who:
@@ -144,14 +157,14 @@ $totalRows_event = mysql_num_rows($event);
 				<? if ($row_event['rsvp'] == "" && $row_event['flyer_url'] == "") {} else {?>
 					<dt  class="event-item-details-list-term event-item-flyer">
 						<? if ($row_event['rsvp']) {?>
-							<div><?php echo $row_event['rsvp']; ?></div>
+							<div class="event-item-details-rsvp"><?php echo $row_event['rsvp']; ?></div>
 						<? } ?>
 						<? if ($row_event['flyer_url']) {?>
 							<a href="<?php echo $row_event['flyer_url']; ?>" target="_blank" class="<?php if ($row_event['flyer_link_class']) {echo $row_event['flyer_link_class'];} else { print "cta"; } ?>">Download a flyer for your meeting</a>
 						<? } ?>
 					</dt>
 				<? } ?>
-			</dl>			
+			</dl>
 			<div class="aside">
 				<? if ($row_event['poster_url']) {?>
 					<img src="<?php echo $row_event['poster_url']; ?>" width="325" class="illustration">

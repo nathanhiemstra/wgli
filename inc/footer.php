@@ -3,6 +3,7 @@
 		<ul id="footer">
 			<li><a href="/privacy-policy/" <? if ($section == "privacy-policy") {print ' class="on"';}?>>Privacy Policy</a></li>
 			<li><a href="/terms-of-use/" <? if ($section == "terms-of-use") {print ' class="on"';}?>>Terms of Use</a></li>
+			<li><a href="/mailing-list/" <? if ($section == "mailing-list") {print ' class="on"';}?>>Newsletter</a></li>
 			<li>&copy; 2011-<?=date('Y')?> West Great Lakes ACA Intergroup - P.O. Box 2124, Bolingbrook, IL 60440</li>
 		</ul>
 		<script type="text/javascript" src="/scripts/jquery.pack.js"></script>

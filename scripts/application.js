@@ -116,7 +116,7 @@ $(document).ready(function() {
 	
 	$('.more-info-cta').click(function() {
 		$(this).hide();
-		$(this).parent().next().show();
+		$(this).parent().next().slideDown('fast');
 	});
 
 	
@@ -133,22 +133,31 @@ $(document).ready(function() {
 		$('.info-more').hide();
 	});
 	
-	$('#meeting-id-26-cta').click(function() {
-		$('#meeting-id-26').children('.info-more').show();
-	});
-	
-	$('#meeting-id-27-cta').click(function() {
-		$('#meeting-id-27').children('.info-more').show();
+	$('.meeting-cta').click(function() {
+		var meetingId = $(this).attr('href');
+		$(meetingId).children('.info-more').slideDown('slow');
+
 	});
 
-	$('#meeting-id-28-cta').click(function() {
-		$('#meeting-id-28').children('.info-more').show();
+
+	$('.show-subscribe-newsletter').click(function(e) {
+		e.preventDefault();
+		$('.show-subscribe-newsletter-target').slideDown();
+		$(this).replaceWith("Subscribe");
 	});
 
-	$('#meeting-id-12-cta').click(function() {
-		$('#meeting-id-12').children('.info-more').show();
+	$('a').click(function(){
+	    $('html, body').animate({
+	        scrollTop: $( $.attr(this, 'href') ).offset().top
+	    }, 100);
+	    return false;
 	});
+
+
+
 	
+
+
 	
 	
 	

@@ -29,7 +29,7 @@ p#vtip #vtipArrow { position: absolute; top: -10px; left: 5px; font-size: 12px;}
 
 
 body {
-	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-family: Helvetica, sans-serif;
 	font-size: 62.5%;
 	line-height: 1;
 	background: #97b6d8;
@@ -116,6 +116,18 @@ ul.list-normal.list-secondary li,
 
 #content .list-no-indent {
 	padding-left: 15px;
+}
+
+.table-standard {
+	border: 1px solid #AAC4DE;
+	border-bottom: none;;
+	background-color: #E2F0FD;
+
+
+} 
+.table-standard td {
+	border-bottom: 1px solid #AAC4DE;
+	padding: 5px 12px;
 }
 
 
@@ -207,6 +219,10 @@ object.vector {
 	/*line-height:1em;*/
 }
 
+.list-normal {
+	line-height: 1.334em;	
+}
+
 #content .list-normal li li,
 #content .list-normal li #content dd,
 #content .list-normal li #content dt,
@@ -241,6 +257,10 @@ object.vector {
 
 #content {
 	padding:  30px 35px;
+}
+
+.small {
+	font-size: .8em;
 }
 
 #header {
@@ -309,6 +329,16 @@ a.link-pdf {
 
 .link-red-book { 
 	background: url(../images/buttons/red-book.png) no-repeat 0 3px;
+	padding-left: 35px;
+}
+
+.link-meditation-book { 
+	background: url(../images/buttons/meditation-book.png) no-repeat 0 3px;
+	padding-left: 35px;
+}
+
+.link-tri-fold {
+	background: url(../images/buttons/tri-fold.png) no-repeat 0 3px;
 	padding-left: 35px;
 }
 
@@ -387,6 +417,7 @@ a.link-pdf {
 	padding-top: 20px
 }
 
+input.cta,
 a.cta {
 	background: #a47d56; /* Old browsers */
 	background: -moz-linear-gradient(top,  #9e724a 0%, #c4966d 100%); /* FF3.6+ */
@@ -410,6 +441,7 @@ a.cta {
         box-shadow:  2px 5px 5px 0px rgba(0, 0, 0, .2);*/
 }
 
+input.cta:hover,
 a.cta:hover {
 	color: #1B2F48;
 
@@ -436,6 +468,24 @@ a.cta:hover {
 	background-position: 0 -50px;
 }
 
+.link-previous {
+	background: url(../images/buttons/icon-sprite.png) no-repeat 0 -400px;
+	padding-left: 23px;
+}
+
+.link-previous:hover {
+	background-position: 0 -450px;
+}
+
+.link-next {
+	background: url(../images/buttons/icon-sprite.png) no-repeat 100% 0;
+	padding-right: 23px;
+}
+
+.link-next:hover {
+	background-position: 100% -50px;
+}
+
 .link-add {
 	background: url(../images/buttons/icon-sprite.png) no-repeat 0 -100px;
 	padding-left: 23px;
@@ -454,14 +504,7 @@ a.cta:hover {
 	background-position: 0 -250px;
 }
 
-.link-previous {
-	background: url(../images/buttons/icon-sprite.png) no-repeat 0 -300px;
-	padding-left: 23px;
-}
 
-.link-previous:hover {
-	background-position: 0 -350px;
-}
 
 
 /* Meetings */
@@ -887,6 +930,18 @@ a:hover.address-map-url {
 	border:  5px solid #150795;
 }
 
+.events-not-local {
+	border-top: 1px dashed #BDBBBA;
+	padding-top: 20px;
+	margin-top: 50px;
+}
+.event-item-details-rsvp {
+	border-bottom: 1px solid #bdbbba;
+	padding-bottom: 20px;
+	margin-bottom: 25px;
+
+}
+
 
 
 
@@ -937,7 +992,7 @@ a:hover.address-map-url {
 
 #footer li {
 	display: inline-block;	
-	padding:  15px 24px;
+	padding:  15px;
 }
 
 #footer a:hover,
@@ -945,5 +1000,75 @@ a:hover.address-map-url {
 	color: #fff;
 	text-decoration: none;
 }
+
+
+.left-column-item {
+	width: 560px;
+	float: left;
+}
+
+
+.right-column-item {
+	width: 285px;
+	float: right;
+}
+
+/* Mailing List */
+
+.mc_embed_signup-container {
+	
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	background-color: #e2f0fd;
+	border: 1px solid #aac4de;
+	padding: 15px 20px;
+	font-size: 1.3em;
+	line-height: 1.6em;
+	margin-bottom: 20px;
+}
+
+
+
+.mc_embed_signup-container #mc_embed_signup form {
+	padding: 0;
+}
+
+.mc_embed_signup-container  #mc_embed_signup label {
+	font-size: 13px;
+	font-weight: normal;
+	padding-bottom: 0;
+}
+
+.mc_embed_signup-container  #mc_embed_signup input.email {
+	width: 160px;
+	margin-bottom: 0;
+	margin-right: 0;
+	padding: 6px 0;
+	display: inline;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border:  1px solid #999;
+}
+
+
+.mc_embed_signup-container #mc_embed_signup input {
+	
+}
+.mc_embed_signup-container #mc_embed_signup input:focus {
+	border:  1px solid #777;
+}
+
+.mc_embed_signup-container  #mc_embed_signup input.cta {
+	display: inline;
+	padding: 6px 16px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+
+
 
 

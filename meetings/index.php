@@ -226,7 +226,7 @@ function getDayNames($i) {
 				<?php } while ($row_meetings_chicago = mysql_fetch_assoc($meetings_chicago)); ?>
 			</ul>
 			<p class="meeting-ctas">
-				<strong><a href="/pdf/ACA-Meetings-Chicago-Indiana-Wisconsin-2012-06-20-v4.1.pdf" target="_blank" class="link-print">Printable meeting list</a></strong><br />
+				<strong><a href="/pdf/meetings-printable/ACA-Meetings-Chicago-Indiana-Wisconsin-2014-01-19.pdf" target="_blank" class="link-print">Printable meeting list</a></strong><br />
 				<strong><a href="mailto:webmaster@westgreatlakesaca.org" class="link-add">Add a meeting</a></strong>
 			</p>
 		</div>
@@ -267,7 +267,9 @@ function getDayNames($i) {
 						    $wso_id_post = ''; 
 						  } ?>
 						<?=$wso_id_pre?>
+
 					  <strong>
+						 	<? getDayNames($row_meetings_milwaukee['day']); ?> 
 						 	<?
    						  echo date('g:i' , $row_meetings_milwaukee['unixdate_time_start']);
    						  if ($row_meetings_milwaukee['unixdate_time_end'] !== NULL) {
@@ -335,15 +337,13 @@ function getDayNames($i) {
 				<?php } while ($row_meetings_milwaukee = mysql_fetch_assoc($meetings_milwaukee)); ?>
 			</ul>
 			<p class="meeting-ctas">
-				<strong><a href="/pdf/ACA-Meetings-Chicago-Indiana-Wisconsin-2012-06-20-v4.1.pdf" target="_blank" class="link-print">Printable meeting list</a></strong><br />
+				<strong><a href="/pdf/meetings-printable/ACA-Meetings-Chicago-Indiana-Wisconsin-2014-01-19.pdf" target="_blank" class="link-print">Printable meeting list</a></strong><br />
 				<strong><a href="mailto:webmaster@westgreatlakesaca.org" class="link-add">Add a meeting</a></strong>
 			</p>
 		</div>
 
 		<div class="meetings-map">
-
-<iframe width="463" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps/ms?msa=0&amp;msid=214133927203785504508.0004a839414370c0c6e64&amp;ie=UTF8&amp;t=m&amp;ll=42.799431,-87.868652&amp;spn=0.705343,1.271667&amp;z=9&amp;output=embed"></iframe><br /><small>View <a href="https://maps.google.com/maps/ms?msa=0&amp;msid=214133927203785504508.0004a839414370c0c6e64&amp;ie=UTF8&amp;t=m&amp;ll=42.799431,-87.868652&amp;spn=0.705343,1.271667&amp;z=9&amp;source=embed" style="color:#0000FF;text-align:left">Adult Children of Alcoholic Meetings - West Great Lakes</a> in a larger map</small>
-	</div>
+			<iframe width="463" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/ms?msa=0&amp;msid=214133927203785504508.0004a839414370c0c6e64&amp;hl=en&amp;ie=UTF8&amp;t=m&amp;ll=43.177141,-88.648682&amp;spn=1.802621,2.537842&amp;z=8&amp;output=embed"></iframe><br /><small>View <a href="https://www.google.com/maps/ms?msa=0&amp;msid=214133927203785504508.0004a839414370c0c6e64&amp;hl=en&amp;ie=UTF8&amp;t=m&amp;ll=43.177141,-88.648682&amp;spn=1.802621,2.537842&amp;z=8&amp;source=embed" style="color:#0000FF;text-align:left">Adult Children of Alcoholic Meetings - West Great Lakes</a> in a larger map</small>		</div>
 
 	</div>
 	
@@ -442,7 +442,7 @@ function getDayNames($i) {
 				<?php } while ($row_meetings_indiana = mysql_fetch_assoc($meetings_indiana)); ?>
 			</ul>
 			<p class="meeting-ctas">
-				<strong><a href="/pdf/ACA-Meetings-Chicago-Indiana-Wisconsin-2012-06-20-v4.1.pdf" target="_blank" class="link-print">Printable meeting list</a></strong><br />
+				<strong><a href="/pdf/meetings-printable/ACA-Meetings-Chicago-Indiana-Wisconsin-2014-01-19.pdf" target="_blank" class="link-print">Printable meeting list</a></strong><br />
 				<strong><a href="mailto:webmaster@westgreatlakesaca.org" class="link-add">Add a meeting</a></strong>
 			</p>
 		</div>

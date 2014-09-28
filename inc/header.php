@@ -14,11 +14,12 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 	<link rel="icon" href="favicon.ico" />
 	<link rel="stylesheet" href="/css/screen.css?v=1" type="text/css" media="all" />
+	<link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
 	<!--[if lte IE 7]>
 		<link rel="stylesheet" href="/css/ie7.css" type="text/css" media="all" />
 	<![endif]-->
 </head>
-<?php flush(); ?>
+
 
 <body <? if ($section) {echo 'class="section-'.$section.'"';} ?> <? if ($page) {echo 'id="page-'.$page.'"';} ?>>
 	<div id="skip"><a href="#content" title="Skip to content">Skip to content</a></div>
