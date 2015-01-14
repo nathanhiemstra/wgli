@@ -128,7 +128,7 @@ $totalRows_next_ig_meeting = mysql_num_rows($next_ig_meeting);
 
 mysql_select_db($database_wgli_admin, $wgli_admin);
 /*  $query_ig_meetings = sprintf("SELECT *, UNIX_TIMESTAMP(when_start) AS unixdate_when_start, UNIX_TIMESTAMP(when_end) AS unixdate_when_end 														   FROM intergroup_meetings WHERE when_start > %s AND active = 'y' ORDER BY when_start ASC", GetSQLValueString($colname_ig_meetings, "date"));*/
-$query_news_meetings = sprintf("SELECT *, UNIX_TIMESTAMP(time_start) AS unixdate_time_start, UNIX_TIMESTAMP(date_added) AS unixdate_date_added, id, neighborhood, zone, `day`, time_start, active, date_added FROM meetings WHERE date_added > %s ORDER BY date_added ASC", GetSQLValueString($unixdate_3_months_ago, "date"));
+$query_news_meetings = sprintf("SELECT *, UNIX_TIMESTAMP(time_start) AS unixdate_time_start, UNIX_TIMESTAMP(date_added) AS unixdate_date_added, id, neighborhood, zone, `day`, time_start, active, date_added FROM meetings WHERE active = 'true' AND date_added > %s ORDER BY date_added ASC", GetSQLValueString($unixdate_3_months_ago, "date"));
 $news_meetings = mysql_query($query_news_meetings, $wgli_admin) or die(mysql_error());
 $row_news_meetings = mysql_fetch_assoc($news_meetings);
 $totalRows_news_meetings = mysql_num_rows($news_meetings);
