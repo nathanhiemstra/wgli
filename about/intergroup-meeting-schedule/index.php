@@ -51,7 +51,7 @@ $totalRows_ig_meetings = mysql_num_rows($ig_meetings);
 
 
 <div id="main">
-<h1>Intergroup Meeting Schedule - 2013</h1>
+<h1>Intergroup Meeting Schedule - <?=date('Y')?></h1>
 
 <p>Meetings start at <strong>1pm</strong></p>
 
